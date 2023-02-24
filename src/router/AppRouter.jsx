@@ -1,13 +1,12 @@
-import { useEffect } from "react";
 import {
   BrowserRouter,
   Routes,
   Route,
-  Navigate
 } from "react-router-dom";
 import { Crud } from "../pages/Crud";
 import { Main } from "../pages/Main";
 import { Cart } from "../pages/Cart";
+import {Favorites} from "../pages/Favorites";
 
 
 
@@ -19,6 +18,7 @@ export const AppRouter = () => {
           <Route path="/" element={<Main/>} />
           <Route path="/crud" element={<Crud/>} />
           <Route path="/cart" element={<Cart/>} />
+          <Route path="/favorites" element={<Favorites/>} />
     </Routes>
   </BrowserRouter> )
 }
