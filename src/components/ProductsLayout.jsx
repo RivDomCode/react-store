@@ -5,21 +5,23 @@ const ProductsLayout = () => {
 
     const [productList, setProductList] = useState([]);
 
+    const getDataFromAPI = async() =>{
+      const url = 'https://dummyjson.com/products?limit=0';
+      const resp = await fetch(url);
+      const data = await resp.json();
+      const { products } = data;
+      setProductList(products);
+    }
+
     useEffect(() => {
-        fetch('https://dummyjson.com/products?limit=0')
-        .then(res => res.json())
-        .then(data => setProductList(data));
+      getDataFromAPI();
     }, [])
 
-    const { products } = productList;
-    console.log(products)
-
-
   return (
-    <div>
+    <div className='productsLayout'>
        {
-        products.map(product => (
-            <ProductCard key={product.id} />
+        productList.map(product => (
+            <ProductCard key={product.id} product={product}/>
         ))
        }
     </div>
