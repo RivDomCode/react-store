@@ -5,11 +5,11 @@ const Navbar = () => {
   return (
     <div className='navbar'>
         <div className="navbar__logo">
-            <BsShop/>
+            <BsShop className='navbar__logo__icon'/>
             Logo
         </div>
         <div className="navbar__search">
-            <input type="text" placeholder='Search a product..'/>
+            <input type="text" placeholder='Search a product...'/>
             <input type="submit" value="Search"/>
         </div>
         <div className="navbar__links">

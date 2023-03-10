@@ -3,9 +3,6 @@ import ProductsLayout from '../components/ProductsLayout';
 
 export const Main = () => {
 
-
-
-
   return (
     <>
       <Navbar/>
